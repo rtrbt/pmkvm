@@ -56,10 +56,10 @@ virsh attach-device $VMNAME keyboard.xml &
 
 Ensure your user has privileges to run virsh: [See here](https://wiki.archlinux.org/index.php/Libvirt#Set_up_authentication)
 
-## Monitors
+### Monitors
 
 Monitors don't need to be passed to the virtual machine, instead they need to be instructed to switch to another input source. Use [ddcutil](https://github.com/rockowitz/ddcutil) on the host, for example:
-### Host
+#### Host
 ~~~:
 $ sudo ddcutil detect # detect available monitors
 Display 1
@@ -85,7 +85,7 @@ Create one or more shell scripts (one per monitor) to select different input sou
 sudo ddcutil setvcp 60 0f -d 1 &
 ~~~
 Also ensure to be able to run ddcutil without password prompt.
-### Guest
+#### Guest
 As the monitors are now connected to the virtual machine, to pass them back to the host you need to send hot keys from the microcontroller to the guest, which is done as described here:
 
 Create a script like the following and register a hot key on the host.
