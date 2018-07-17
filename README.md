@@ -20,7 +20,6 @@ Required are:
 
 ### Example schematic
 ![Alt text](./pmkvm_breadboard.svg)
-<img src="./pmkvm_breadboard.svg">
 
 Wire everything together and flash the provided .ino file. You can test the device by mapping the hot keys (CTRL+META+SHIFT+ one of W, S, R, F, T, G if you didn't change them) to send a notification or start a program.
 
